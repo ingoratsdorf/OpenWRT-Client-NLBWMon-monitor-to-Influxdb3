@@ -1,0 +1,3 @@
+# This file should have the format of
+# <mac addr> <hostname>
+# Empty lines are permitted, anything that does not fir the format "some_text some text" will be ignored
