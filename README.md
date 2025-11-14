@@ -32,8 +32,11 @@ It can also provide a nice UI as a control if everything is working as intended.
 * Add it to the chrontab in the OpenWRT UI under 'System' -> 'Scheduled Tasks', suggested every 5-15 minutes to avoiud collecting too much data, but that's up to you:
 ```
 # Run nlwbmon updates every 5 min
-*/5 * * * * /opt/bin/nlbw_2_influxdb3.lua
+*/5 * * * * cd /opt/bin && /opt/bin/nlbw_2_influxdb3.lua
 ```
 Done!
+
+It's important that you cd into its working directory, otherwise the config file cannot be found.
+There are (complicated) ways of retrieviung the module path but why doing a lot of calls and math and string parsing when this just does the trick.
 
 If you want, you can do a testrun executing `./nlbw_2_influxdb3.lua` in your shell. Check if all runs.
