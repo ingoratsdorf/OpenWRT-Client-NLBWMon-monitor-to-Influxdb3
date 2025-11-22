@@ -1,0 +1,8 @@
+config nlbw_2_influxdb3
+    option cache_file_path '/tmp/nlbw_2_influxdb3.maclist.json'
+    option user_list_path '/opt/bin/nlbw_2_influxdb3.maclist.txt'
+    option remove_local_domain '.local'
+    option influxdb_url 'http://localhost:8181/api/v3/write_lp?db=nlbwmon&precision=second'
+    option influxdb_token 'your_influxdb_token_here'
+    option debug 'false'
+    option interval '300'
